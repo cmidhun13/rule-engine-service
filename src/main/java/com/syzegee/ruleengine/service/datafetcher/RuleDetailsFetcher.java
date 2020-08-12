@@ -77,7 +77,7 @@ public class RuleDetailsFetcher implements DataFetcher<RunRuleResponse> {
             SzRule listOfBenefitDetails = getRule(benefitRuleName); //call bList
             for(SzRuleDetails benefitAttributes : listOfBenefitDetails.getSzRuleDetailsCollection()) {
                 if("benefitIcon".equals(benefitAttributes.getRuleDetailCode())){
-                    benefit.setBenefitlcon(benefitAttributes.getRuleDetailValue());               //benefitlcon
+                    benefit.setBenefitIcon(benefitAttributes.getRuleDetailValue());               //benefitlcon
                 }else if("benefitRedirectUrl".equals(benefitAttributes.getRuleDetailCode())){
                     benefit.setBenefitRedirectUrl(benefitAttributes.getRuleDetailValue());        //benefitRedirectUrl
                 } else if("vendorList".equals(benefitAttributes.getRuleDetailCode())){

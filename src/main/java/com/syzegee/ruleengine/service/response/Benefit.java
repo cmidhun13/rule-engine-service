@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Benefit {
     private String benefitName;
-    private String benefitlcon;
+    private String benefitIcon;
     private String benefitRedirectUrl;
     private List<Vendor> vendorList;
 }

@@ -3,6 +3,7 @@ package com.syzegee.ruleengine.service.entity;
 
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.experimental.Tolerate;
 
 import java.io.Serializable;
@@ -33,6 +34,7 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 
 @Entity
+@Data
 @Table(name = "sz_rule")
 @XmlRootElement
 @Builder
@@ -105,106 +107,6 @@ public class SzRule  implements Serializable {
         this.ruleId = ruleId;
         this.ruleCode = ruleCode;
         this.ruleName = ruleName;
-    }
-
-
-
-    public Long getRuleId() {
-        return ruleId;
-    }
-
-    public void setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
-    }
-
-    public String getRuleCode() {
-        return ruleCode;
-    }
-
-    public void setRuleCode(String ruleCode) {
-        this.ruleCode = ruleCode;
-    }
-
-    public String getRuleName() {
-        return ruleName;
-    }
-
-    public void setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-    }
-
-    public String getRuleDesc() {
-        return ruleDesc;
-    }
-
-    public void setRuleDesc(String ruleDesc) {
-        this.ruleDesc = ruleDesc;
-    }
-
-    public String getRuleType() {
-        return ruleType;
-    }
-
-    public void setRuleType(String ruleType) {
-        this.ruleType = ruleType;
-    }
-
-    public Boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    @XmlTransient
-    public Collection<SzRuleDetails> getSzRuleDetailsCollection() {
-        return szRuleDetailsCollection;
-    }
-
-    public void setSzRuleDetailsCollection(Collection<SzRuleDetails> szRuleDetailsCollection) {
-        this.szRuleDetailsCollection = szRuleDetailsCollection;
-    }
-
-    @XmlTransient
-    public Collection<SzProjectRules> getSzProjectRulesCollection() {
-        return szProjectRulesCollection;
-    }
-
-    public void setSzProjectRulesCollection(Collection<SzProjectRules> szProjectRulesCollection) {
-        this.szProjectRulesCollection = szProjectRulesCollection;
     }
 
     @Override

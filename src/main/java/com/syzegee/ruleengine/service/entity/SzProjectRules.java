@@ -1,6 +1,7 @@
 package com.syzegee.ruleengine.service.entity;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.experimental.Tolerate;
 
 import java.io.Serializable;
@@ -27,6 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Ram Prasad
  */
 @Entity
+@Data
 @Table(name = "sz_project_rules")
 @XmlRootElement
 @Builder
@@ -85,80 +87,6 @@ public class SzProjectRules  implements Serializable {
     public SzProjectRules(Long projectRulesId, String ruleValue) {
         this.projectRulesId = projectRulesId;
         this.ruleValue = ruleValue;
-    }
-
-
-
-    public Long getProjectRulesId() {
-        return projectRulesId;
-    }
-
-    public void setProjectRulesId(Long projectRulesId) {
-        this.projectRulesId = projectRulesId;
-    }
-
-    public String getRuleValue() {
-        return ruleValue;
-    }
-
-    public void setRuleValue(String ruleValue) {
-        this.ruleValue = ruleValue;
-    }
-
-    public Boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    public SzRule getRuleId() {
-        return ruleId;
-    }
-
-    public void setRuleId(SzRule ruleId) {
-        this.ruleId = ruleId;
-    }
-
-    public SzRuleProject getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(SzRuleProject projectId) {
-        this.projectId = projectId;
     }
 
     @Override

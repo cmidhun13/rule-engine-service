@@ -1,6 +1,7 @@
 package com.syzegee.ruleengine.service.entity;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.experimental.Tolerate;
 
 import java.io.Serializable;
@@ -30,6 +31,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Ram Prasad
  */
 @Entity
+@Data
 @Table(name = "sz_rule_project")
 @XmlRootElement
 @Builder
@@ -99,97 +101,6 @@ public class SzRuleProject implements Serializable {
         this.projectId = projectId;
         this.projectCode = projectCode;
         this.projectName = projectName;
-    }
-
-
-
-    public Long getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(Long projectId) {
-        this.projectId = projectId;
-    }
-
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
-
-    public String getProjectCode() {
-        return projectCode;
-    }
-
-    public void setProjectCode(String projectCode) {
-        this.projectCode = projectCode;
-    }
-
-    public String getProjectName() {
-        return projectName;
-    }
-
-    public void setProjectName(String projectName) {
-        this.projectName = projectName;
-    }
-
-    public String getProjectDesc() {
-        return projectDesc;
-    }
-
-    public void setProjectDesc(String projectDesc) {
-        this.projectDesc = projectDesc;
-    }
-
-    public Boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    @XmlTransient
-    public Collection<SzProjectRules> getSzProjectRulesCollection() {
-        return szProjectRulesCollection;
-    }
-
-    public void setSzProjectRulesCollection(Collection<SzProjectRules> szProjectRulesCollection) {
-        this.szProjectRulesCollection = szProjectRulesCollection;
     }
 
     @Override

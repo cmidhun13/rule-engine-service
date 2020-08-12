@@ -1,6 +1,7 @@
 package com.syzegee.ruleengine.service.entity;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.experimental.Tolerate;
 
 import java.io.Serializable;
@@ -29,6 +30,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Ram Prasad
  */
 @Entity
+@Data
 @Table(name = "sz_rule_details")
 @XmlRootElement
 @Builder
@@ -88,80 +90,6 @@ public class SzRuleDetails implements Serializable {
     public SzRuleDetails(Long ruleDetailId, String ruleDetailCode) {
         this.ruleDetailId = ruleDetailId;
         this.ruleDetailCode = ruleDetailCode;
-    }
-
-
-
-    public Long getRuleDetailId() {
-        return ruleDetailId;
-    }
-
-    public void setRuleDetailId(Long ruleDetailId) {
-        this.ruleDetailId = ruleDetailId;
-    }
-
-    public String getRuleDetailCode() {
-        return ruleDetailCode;
-    }
-
-    public void setRuleDetailCode(String ruleDetailCode) {
-        this.ruleDetailCode = ruleDetailCode;
-    }
-
-    public String getRuleDetailValue() {
-        return ruleDetailValue;
-    }
-
-    public void setRuleDetailValue(String ruleDetailValue) {
-        this.ruleDetailValue = ruleDetailValue;
-    }
-
-    public Boolean getIsActive() {
-        return isActive;
-    }
-
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(String updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(Date updatedDate) {
-        this.updatedDate = updatedDate;
-    }
-
-    public SzRule getRuleId() {
-        return ruleId;
-    }
-
-    public void setRuleId(SzRule ruleId) {
-        this.ruleId = ruleId;
     }
 
     @Override
