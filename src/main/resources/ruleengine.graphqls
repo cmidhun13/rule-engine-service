@@ -1,0 +1,43 @@
+schema{
+    query:Query
+}
+type Query{
+    customer(id: String): SzRuleProject
+}
+type SzRuleProject{
+    projectId:String
+    customerId:String
+    projectCode:String
+    projectName:String
+    projectDesc:String
+    createdBy:String
+    updatedBy:String
+    szProjectRulesCollection:[SzProjectRules]
+}
+type SzProjectRules{
+    projectRulesId:String
+    ruleValue:String
+    organizationDesc:String
+    createdBy:String
+    updatedBy:String
+    ruleId:SzRule
+}
+type SzRule{
+    ruleId:String
+    ruleCode:String
+    ruleName:String
+    ruleDesc:String
+    ruleType:String
+    createdBy:String
+    updatedBy:String
+    szRuleDetailsCollection:[SzRuleDetails]
+}
+type SzRuleDetails{
+    ruleDetailId:String
+    ruleDetailCode:String
+    ruleDetailValue:String
+    createdBy:String
+    updatedBy:String
+}
+
+

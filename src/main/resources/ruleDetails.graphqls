@@ -1,0 +1,62 @@
+schema{
+    query:Queries
+}
+type Queries{
+    ruleName(name: String): RuleResponse
+}
+
+type RuleResponse{
+    PlatformName:String
+    ruleDesc:String
+    PlanDetails:[PlanDetails]
+
+}
+type PlanDetails{
+    planName:String
+    planDesc:String
+    attributes:[String]
+    benefits:[Benefit]
+}
+type Benefit{
+    benefitName:String
+    benefitIcon:String
+    benefitRedirectUrl:String
+    vendorList:[Vendor]
+}
+type Vendor{
+    vendorId:String
+    vendorName:String
+    vendorDesc:String
+    vendorIcon:String
+}
+type SzRule{
+    ruleId:String
+    ruleCode:String
+    ruleName:String
+    ruleDesc:String
+    ruleType:String
+    createdBy:String
+    updatedBy:String
+    szRuleDetailsCollection:[SzRuleDetail]
+    szProjectRulesCollection:[SzProjectRule]
+}
+
+type SzRuleDetail{
+    ruleDetailId:String
+    ruleDetailCode:String
+    ruleDetailValue:String
+    createdBy:String
+    updatedBy:String
+}
+
+type SzProjectRule{
+    projectRulesId:String
+    ruleValue:String
+    createdBy:String
+    updatedBy:String
+    ruleId:SzRule
+}
+
+
+
+
