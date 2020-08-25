@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "9785513a-33a6-4157-a332-3b335c8ecfea",
+		"name": "Rule Engine Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RunRule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    ruleName(name: \"Benefits\"){\n    ruleName\n    szRuleDetailsCollection{\n    ruleDetailValue\n     }\n    }\n }"
+				},
+				"url": {
+					"raw": "http://ec2-18-188-157-35.us-east-2.compute.amazonaws.com:8090/syzegee/v1/ruleengine/runrule",
+					"protocol": "http",
+					"host": [
+						"ec2-18-188-157-35",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"syzegee",
+						"v1",
+						"ruleengine",
+						"runrule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Plans",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    ruleName(name: \"MasterPlans1\"){\n    PlatformName\n    ruleDesc\n    PlanDetails{\n        planName\n        planDesc\n        attributes\n        benefits{\n            benefitName\n            benefitIcon\n            benefitRedirectUrl\n            vendorList{\n                vendorId\n                vendorName\n                vendorDesc\n                vendorIcon\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/syzegee/v1/ruleengine/plans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"syzegee",
+						"v1",
+						"ruleengine",
+						"plans"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
