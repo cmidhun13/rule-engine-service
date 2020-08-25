@@ -1,0 +1,38 @@
+schema{
+    query:Queries
+}
+type Queries{
+    ruleName(name: String): SzRule
+}
+
+type SzRule{
+    ruleId:String
+    ruleCode:String
+    ruleName:String
+    ruleDesc:String
+    ruleType:String
+    createdBy:String
+    updatedBy:String
+    szRuleDetailsCollection:[SzRuleDetail]
+    szProjectRulesCollection:[SzProjectRule]
+}
+
+type SzRuleDetail{
+    ruleDetailId:String
+    ruleDetailCode:String
+    ruleDetailValue:String
+    createdBy:String
+    updatedBy:String
+}
+
+type SzProjectRule{
+    projectRulesId:String
+    ruleValue:String
+    createdBy:String
+    updatedBy:String
+    ruleId:SzRule
+}
+
+
+
+
