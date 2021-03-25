@@ -2,7 +2,7 @@ schema{
     query:Queries
 }
 type Queries{
-    ruleName(name: String): SzRule
+    ruleName(name: String,projectId:Int): SzRule
 }
 
 type SzRule{
