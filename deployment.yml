@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rule-engine-service
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rule-engine-service
+  template:
+    metadata:
+      labels:
+        app: rule-engine-service
+    spec:
+      containers:
+        - image: cmidhun/rule-engine-service:0.0.1-SNAPSHOT
+          name: rule-engine-service
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "500m"
+            limits:
+              memory: "500Mi"
+              cpu: "2000m"
+          ports:
+            - containerPort: 8090
