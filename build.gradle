@@ -64,7 +64,7 @@ test {
 
 // Devops code start//
 String dockerHubUsernameProperty = findProperty('dockerHubUsername') ?: 'cmidhun'
-String imageName = "${dockerHubUsernameProperty}/customer-events:$version"
+String imageName = "${dockerHubUsernameProperty}/rule-engine-service:$version"
 
 docker {
     name imageName
